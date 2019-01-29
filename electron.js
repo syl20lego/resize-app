@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu } = require('electron')
+const { app, BrowserWindow, Menu, dialog } = require('electron')
 const url = require('url')
 const path = require('path')
 
@@ -41,7 +41,9 @@ const createWindow = () => {
 }
 
 const openFiles = () => {
-  console.log('open')
+  dialog.showOpenDialog({ properties: ['openFile', 'openDirectory', 'multiSelections'] }, ({filepaths, bookmarks}) =>
+    window.webContents.send('openFiles', {filepaths, bookmarks})
+  )
 }
 
 app.on('ready', () => createWindow())
