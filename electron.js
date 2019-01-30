@@ -40,11 +40,9 @@ const createWindow = () => {
   Menu.setApplicationMenu(mainMenu)
 }
 
-const openFiles = () => {
-  dialog.showOpenDialog({ properties: ['openFile', 'openDirectory', 'multiSelections'] }, ({filepaths, bookmarks}) =>
-    window.webContents.send('openFiles', {filepaths, bookmarks})
-  )
-}
+const openFiles = () => 
+  dialog.showOpenDialog({ properties: ['openFile', 'openDirectory', 'multiSelections'] },
+    info => window.webContents.send('openFiles', info))
 
 app.on('ready', () => createWindow())
 
