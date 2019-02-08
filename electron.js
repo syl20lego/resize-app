@@ -18,6 +18,7 @@ const createWindow = () => {
     // Install React Dev Tools
     const { default: installExtension, REACT_DEVELOPER_TOOLS } = require('electron-devtools-installer')
     installExtension(REACT_DEVELOPER_TOOLS).catch(console.log)
+    // installExtension(REDUX_DEVTOOLS).catch(console.log)
     window.webContents.openDevTools()
   } else {
     window = new BrowserWindow({
