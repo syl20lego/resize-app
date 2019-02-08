@@ -1,8 +1,8 @@
-import { OPEN_FILE } from './Types'
+import { SELECTED_FILES } from './Types'
 
-export const openFile = files => {
+export const selectedFiles = files => {
   return {
-    type: OPEN_FILE,
+    type: SELECTED_FILES,
     data: files,
   }
 }

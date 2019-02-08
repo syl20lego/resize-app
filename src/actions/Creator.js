@@ -1,5 +1,6 @@
 import { FAILURE } from './Types'
 import * as FileActions from './FileActions';
+import * as ResizeActions from './ResizeActions';
 
 const failure = (error) => {
   return {
@@ -11,4 +12,5 @@ const failure = (error) => {
 export const ActionCreators = {
   failure,
   ...FileActions,
+  ...ResizeActions
 }

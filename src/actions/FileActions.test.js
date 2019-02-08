@@ -1,10 +1,10 @@
 import { ActionCreators } from './Creator'
-import { OPEN_FILE } from './Types'
+import { SELECTED_FILES } from './Types'
 
-describe('Testing Tweets actions', () => {
-  it('Should create an action to change profile', () => {
-    expect(ActionCreators.openFile()).toEqual({
-      type: OPEN_FILE,
+describe('Testing File actions', () => {
+  it('Should create an action to open file', () => {
+    expect(ActionCreators.selectedFiles()).toEqual({
+      type: SELECTED_FILES,
     })
   })
 })

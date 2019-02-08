@@ -1,10 +1,10 @@
 import reducers from './RootReducer'
-import { SELECTED_FILES } from '../actions/Types'
+import { RESIZE } from '../actions/Types'
 
-describe('Testing File reducer', () => {
-  it('should selected files', () => {
+describe('Testing resize reducer', () => {
+  it('should resize images', () => {
     const state = reducers.file({ dummy: true }, {
-      type: SELECTED_FILES,
+      type: RESIZE,
       data: ['test1.txt', 'test2.txt'],
     });
     expect(state).toEqual({

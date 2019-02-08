@@ -10,9 +10,8 @@ class App extends Component {
   render() {
     if (window.require) {
       const { ipcRenderer } = window.require("electron")
-      ipcRenderer.on('openFiles',  (event, filename) => {
-        console.log(event, filename)
-        store.dispatch(ActionCreators.openFile(filename))
+      ipcRenderer.on('openFiles',  (event, filenames) => {
+        store.dispatch(ActionCreators.selectedFiles(filenames))
       })
     }
     return (

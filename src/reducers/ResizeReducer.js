@@ -1,11 +1,11 @@
-import { SELECTED_FILES } from '../actions/Types';
+import { RESIZE } from '../actions/Types';
 
 const defaultState = {
 }
 
 export default (state = {defaultState}, action) => {
   switch (action.type) {
-    case SELECTED_FILES:
+    case RESIZE:
       return {
         ...state,
         files: action.data,
