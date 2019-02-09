@@ -1,8 +1,5 @@
-import React from 'react';
+import React from 'react'
 
-const ImageViewer = () =>
-  (
-    <div>Image</div>
-  )
+const ImageViewer = () => <div>Image</div>
 
 export default ImageViewer

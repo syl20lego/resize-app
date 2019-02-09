@@ -5,16 +5,13 @@ import rootReducer from '../reducers/RootReducer'
 import rootSagas from '../sagas/RootSagas'
 
 export default () => {
-// middleware that logs actions
-  const loggerMiddleware = createLogger({});
+	// middleware that logs actions
+	const loggerMiddleware = createLogger({})
 
-  const sagaMiddleware = createSagaMiddleware();
-  const store = createStore(
-    combineReducers(rootReducer),
-    applyMiddleware(loggerMiddleware, sagaMiddleware),
-  );
+	const sagaMiddleware = createSagaMiddleware()
+	const store = createStore(combineReducers(rootReducer), applyMiddleware(loggerMiddleware, sagaMiddleware))
 
-  sagaMiddleware.run(rootSagas)
+	sagaMiddleware.run(rootSagas)
 
-  return store
+	return store
 }

@@ -1,8 +1,5 @@
-import React from 'react';
+import React from 'react'
 
-const PropertiesPannel = () =>
-  (
-    <div>Properties</div>
-  )
+const PropertiesPannel = () => <div>Properties</div>
 
 export default PropertiesPannel

@@ -1,8 +1,8 @@
 import { RESIZE } from './Types'
 
-export const resize = config => {
-  return {
-    type: RESIZE,
-    data: config,
-  }
+export const resize = (config) => {
+	return {
+		type: RESIZE,
+		data: config
+	}
 }
