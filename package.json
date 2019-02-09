@@ -5,8 +5,10 @@
   "main": "electron.js",
   "homepage": "./",
   "scripts": {
-    "start": "BROWSER=none react-scripts start & sleep 5 && NODE_ENV=DEV electron .",
-    "electron": "react-scripts build; electron .",
+    "start": "react-scripts start",
+    "electron": "NODE_ENV=DEV electron .",
+    "dev": "sleep 5 && yarn electron & BROWSER=none yarn start",
+    "build": "react-scripts build; electron .",
     "test": "react-scripts test",
     "package-mac": "react-scripts build; electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
     "package-win": "react-scripts build; electron-packager . electron-tutorial-app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/windows/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"ShoppingList\"",
