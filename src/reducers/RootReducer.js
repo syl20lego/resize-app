@@ -3,5 +3,5 @@ import resize from './ResizeReducer'
 
 export default {
 	file,
-	resize
+	resize,
 }

@@ -12,7 +12,7 @@ describe('Testing File reducer', () => {
 		)
 		expect(state).toEqual({
 			dummy: true,
-			files: [ 'test1.txt', 'test2.txt' ]
+			files: [{"path": "file://test1.txt", "status": "new"}, {"path": "file://test2.txt", "status": "new"}]
 		})
 	})
 })

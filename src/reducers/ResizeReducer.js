@@ -7,7 +7,7 @@ export default (state = { defaultState }, action) => {
 		case RESIZE:
 			return {
 				...state,
-				files: action.data
+				files: action.data.map(x =>x)
 			}
 		default:
 			return state

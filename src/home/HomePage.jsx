@@ -2,21 +2,21 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import Home from './Home'
-import { ActionCreators } from '../actions/ActionCreators'
 
 class HomePage extends Component {
-	// componentDidMount() {
-	//   this.props.changeProfile();
-	// }
+	componentDidMount() {
+	  // this.props.changeProfile();
+	}
 
 	render() {
-		return <Home />
+		return <Home files={this.props.files}/>
 	}
 }
 
 const mapStateToProps = (state) => {
+	console.log(state)
 	return {
-		// timeline: state.tweets.timeline,
+		files: state.file.files
 	}
 }
 

@@ -7,7 +7,7 @@ export default (state = { defaultState }, action) => {
 		case SELECTED_FILES:
 			return {
 				...state,
-				files: action.data
+				files: action.data.map(location => ({path: `file://${location}`, status: 'new'}))
 			}
 		default:
 			return state

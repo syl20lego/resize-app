@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Provider } from 'react-redux'
 import configureStore from './store/ConfigureStore'
 import './App.css'
-import Home from './home/Home'
+import HomePage from './home/HomePage'
 import { ActionCreators } from './actions/Creator'
 const store = configureStore()
 
@@ -16,7 +16,7 @@ class App extends Component {
 		}
 		return (
 			<Provider store={store}>
-				<Home />
+				<HomePage />
 			</Provider>
 		)
 	}

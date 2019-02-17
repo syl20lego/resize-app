@@ -3,7 +3,7 @@ import { RESIZE } from '../actions/Types'
 
 describe('Testing resize reducer', () => {
 	it('should resize images', () => {
-		const state = reducers.file(
+		const state = reducers.resize(
 			{ dummy: true },
 			{
 				type: RESIZE,
